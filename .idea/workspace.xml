@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38e3ed52-ff6a-4682-91c7-a326c62e7623" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat.iml" afterDir="false" />
+    <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/assets/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/assets/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/assets/settings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/ChatItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/ChatList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/ChatSettings.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/MessagesList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/SendMessage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/UI/BaseCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/UI/BaseMessage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/components/UserBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/pages/ChatPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +36,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectId" id="2D7PfIfHMDZ2G6dRtRZNiDYv1Ij" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2D7fNQg7MbpmpPjbKPfmANdQ1eZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,7 +51,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Nowe_dokumenty/portfolio/cocktails-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -43,12 +63,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="38e3ed52-ff6a-4682-91c7-a326c62e7623" name="Changes" comment="" />
-      <created>1660047254867</created>
+      <changelist id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="" />
+      <created>1660055002520</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1660047254867</updated>
-      <workItem from="1660047256222" duration="646000" />
+      <updated>1660055002520</updated>
+      <workItem from="1660055003799" duration="1141000" />
+      <workItem from="1660400247682" duration="45325000" />
     </task>
     <servers />
   </component>
