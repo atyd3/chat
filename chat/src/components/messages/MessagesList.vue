@@ -60,13 +60,11 @@
     <base-message class="user two">
       Dummy message
     </base-message>
-<!--    <base-message style="background-color: orangered">-->
 <!--      Add scroll to the last message-->
-<!--    </base-message>-->
   </ul>
 </template>
 <script>
-import BaseMessage from "@/components/UI/BaseMessage";
+import BaseMessage from "@/components/messages/BaseMessage";
 
 export default {
   components: {BaseMessage},
@@ -77,7 +75,7 @@ export default {
 <style scoped>
 ul {
   list-style: none;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
  ::-webkit-scrollbar {

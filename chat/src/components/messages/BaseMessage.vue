@@ -9,7 +9,7 @@
 <style scoped>
 .user div {
   border-radius: 10px;
-  margin: 2px 5px;
+  margin: 2px 15px;
   padding: 8px;
   display: inline-block;
   white-space: pre-wrap;
