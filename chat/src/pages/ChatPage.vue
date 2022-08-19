@@ -10,7 +10,7 @@
 </template>
 <script>
 import BaseCard from "@/components/UI/BaseCard"
-import ChatSettings from "@/components/chats/ChatSettings";
+import ChatSettings from "@/components/ChatSettings";
 import UserBar from "@/components/UserBar"
 import ChatList from "@/components/chats/ChatList";
 import MessagesList from "@/components/messages/MessagesList";
