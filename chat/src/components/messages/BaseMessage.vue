@@ -1,34 +1,32 @@
 <template>
-  <li>
-    <div>
+    <div :class="role">
       <slot></slot>
     </div>
-  </li>
 </template>
 
+<script>
+export default {
+  props: ['role']
+}
+</script>
+
 <style scoped>
-.user div {
+
+div {
   border-radius: 10px;
-  margin: 2px 15px;
   padding: 8px;
-  display: inline-block;
   white-space: pre-wrap;
   word-break: break-word;
   font: 0.9rem Roboto,sans-serif;
+  display: inline-block;
 }
 
-.one div {
-  max-width: 45%;
+.sended {
   background-color: #cdcbcb;
 }
 
-.two div {
-  max-width: 45%;
+.received {
   background-color: #ffdf43;
-}
-
-.two {
-  text-align: right;
 }
 
 </style>

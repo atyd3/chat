@@ -1,67 +1,29 @@
 <template>
-  <ul>
-    <base-message class="user one">
-      hi
-    </base-message>
-    <base-message class="user two">
-      hello
-    </base-message>
-    <base-message class="user one">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user two">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user one">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium, animi atque corporis cupiditate incidunt iure minus, natus, nesciunt non praesentium reprehenderit. Assumenda consectetur dignissimos exercitationem magnam quos sunt tenetur!
-    </base-message>
-    <base-message class="user two">
-      Lorem ipsum dolor sit amet, consectetuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuur adipisicing elit. Beatae cum dolorum earum eligendi est id maiores placeat tempore temporibus unde. Accusantium dolorum eligendi neque nisi non praesentium provident sint voluptas.
-    </base-message>
-    <base-message class="user one">
-      <div>Dummy message</div>
-    </base-message>
-    <base-message class="user two">
-      <div>Dummy message</div>
-    </base-message>
-    <base-message class="user one">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user one">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user one">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user two">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user one">
-      Dummy message
-    </base-message>
-    <base-message class="user two">
-      Lorem ipsum dolor sit amet, consectetuuuuuuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuuuuuuuuuuuuuuuuur adipisicing elit. Beatae cum dolorum earum eligendi est kmkjmkm njnj id maiores placeat tempore temporibus unde. Accusantium dolorum eligendi neque nisi non praesentium provident sint voluptas.
-    </base-message>
-    <base-message class="user one">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user two">
-      Lorem ipsum dolor sit amet, consectetur adipisicing
-    </base-message>
-    <base-message class="user one">
-      Dummy message
-    </base-message>
-    <base-message class="user two">
-      Lorem ipsum dolor sit amet, consectetuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuur adipisicing elit. Beatae cum dolorum earum eligendi est id maiores placeat tempore temporibus unde. Accusantium dolorum eligendi neque nisi non praesentium provident sint voluptas.
-    </base-message>
-    <base-message class="user one">
-      Dummy message
-    </base-message>
-    <base-message class="user two">
-      Dummy message
-    </base-message>
-<!--      Add scroll to the last message-->
-  </ul>
+  <div class="messages__list">
+    <div class="messages__item">
+      <base-message role="sended">
+        hi
+      </base-message>
+    </div>
+    <div class="messages__item messages__item--left">
+      <base-message role="received">
+        hello
+      </base-message>
+    </div>
+    <div class="messages__item messages__item--left">
+      <base-message role="received">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at atque blanditiis culpa
+        cumque cupiditate earum eius illo ipsum itaque, labore laborum minus natus non odio omnis, optio quidem.
+      </base-message>
+    </div>
+    <div class="messages__item">
+      <base-message role="sended">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur cum cupiditate debitis dicta excepturi facere maiores nulla officia optio, quidem ratione rerum tenetur ullam veniam voluptatibus?
+      </base-message>
+    </div>
+
+    <!--      Add scroll to the last message-->
+  </div>
 </template>
 <script>
 import BaseMessage from "@/components/messages/BaseMessage";
@@ -72,15 +34,35 @@ export default {
 
 </script>
 
-<style scoped>
-ul {
-  list-style: none;
-  overflow-y: auto;
+<style lang="scss" scoped>
+
+.messages {
+  &__list {
+    list-style: none;
+    overflow-y: auto;
+    display: flex;
+    margin: 10px 0 10px 15px;
+    flex-direction: column;
+
+    &--small {
+      height: 320px;
+      margin: 3px;
+    }
+  }
+
+  &__item {
+    max-width: 45%;
+    margin: 2px 0;
+
+    &--left {
+      align-self: flex-end;
+    }
+  }
 }
 
- ::-webkit-scrollbar {
-   width: 5px;
- }
+::-webkit-scrollbar {
+  width: 5px;
+}
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 5px #b7c4c9;
@@ -93,7 +75,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,223,67, 0.5);
+  background: rgba(255, 223, 67, 0.5);
 }
 
 </style>

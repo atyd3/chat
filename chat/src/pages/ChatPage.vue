@@ -4,7 +4,7 @@
     <chat-list class="grid-container__left right-shadow"></chat-list>
 
     <user-bar></user-bar>
-    <messages-list></messages-list>
+    <messages-list class="messages"></messages-list>
     <send-message class="grid-container__right"></send-message>
   </base-card>
 </template>
@@ -28,6 +28,9 @@ export default {
   grid-template-rows: 2fr 15fr 1fr;
   height: 70vh;
 
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 90%;
 
   &__right {
     grid-column: 2/3;

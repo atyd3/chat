@@ -5,12 +5,15 @@
       <h3>Username</h3>
       <p>online</p>
     </div>
+    <div class="close-icon">
+      <span>&#10005;</span>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .status-bar {
-  font-family: "Roboto", sans-serif;
+  font: 1rem "Roboto", sans-serif;
   display: flex;
   position: relative;
   box-shadow: 0px 13px 11px -12px rgba(0, 0, 0, .12);
@@ -28,6 +31,39 @@
     position: absolute;
     top: 10px;
     left: 80px;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  &__small {
+    padding: 7px;
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: .8rem;
+    }
+
+    img {
+      border: none;
+      width: 40px;
+      height: auto;
+      margin: 0;
+    }
+
+    .status-container {
+      left: 55px;
+    }
+
+    .close-icon {
+      position: absolute;
+      right: 10px;
+      display: block;
+    }
   }
 }
 </style>

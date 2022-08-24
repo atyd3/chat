@@ -20,6 +20,7 @@
 
   h2 {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     margin-bottom: 5px;
   }
 

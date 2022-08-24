@@ -16,4 +16,8 @@ components: {TheHeader},
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-size: 10px;
+}
 </style>
