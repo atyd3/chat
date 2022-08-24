@@ -18,10 +18,14 @@
     </div>
     <div class="messages__item">
       <base-message role="sended">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur cum cupiditate debitis dicta excepturi facere maiores nulla officia optio, quidem ratione rerum tenetur ullam veniam voluptatibus?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur cum
       </base-message>
     </div>
-
+    <div class="messages__item messages__item--left">
+      <base-message role="received">
+        ok
+      </base-message>
+    </div>
     <!--      Add scroll to the last message-->
   </div>
 </template>
@@ -47,6 +51,10 @@ export default {
     &--small {
       height: 320px;
       margin: 3px;
+
+      .messages__item {
+        max-width: 80%;
+      }
     }
   }
 

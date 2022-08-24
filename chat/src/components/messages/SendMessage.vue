@@ -30,7 +30,7 @@
     }
   }
 
-  &__small {
+  &--small {
     padding: 5px;
     margin: 0;
     width: 100%;

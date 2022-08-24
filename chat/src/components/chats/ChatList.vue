@@ -1,7 +1,7 @@
 <template>
   <div class="chat__list">
     <chat-item></chat-item>
-    <chat-item class="chat__item--active"></chat-item>
+    <chat-item class="chat__item chat__item--active"></chat-item>
     <chat-item></chat-item>
     <chat-item></chat-item>
     <chat-item></chat-item>
@@ -23,12 +23,12 @@ export default {
   &__list {
     overflow-y: auto;
     font: 0.9rem Roboto, sans-serif;
+  }
 
-    &__item {
-      &--active {
-        background: linear-gradient(90deg, rgba(205, 203, 203, 0.25) 25%, rgba(205, 203, 203, 1) 75%);
-        box-shadow: none;
-      }
+  &__item {
+    &--active {
+      background: linear-gradient(90deg, rgba(205, 203, 203, 0.25) 25%, rgba(205, 203, 203, 1) 75%);
+      box-shadow: none;
     }
   }
 

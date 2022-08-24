@@ -3,7 +3,7 @@
     <base-card>
       <user-bar class="status-bar__small"></user-bar>
       <messages-list class="messages__list--small"></messages-list>
-      <send-message class="send__small"></send-message>
+      <send-message class="send send--small"></send-message>
     </base-card>
   </div>
 </template>

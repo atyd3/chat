@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chat/src/components/chats/ChatPopup.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chat/src/components/nav/NavItem.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chat/src/components/nav/NavList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -11,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/chat/src/components/UI/BaseCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/UI/BaseCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/UserBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/UserBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/chats/ChatList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/chats/ChatList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/src/components/chats/ChatPopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/chats/ChatPopup.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/messages/BaseMessage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/messages/BaseMessage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/messages/MessagesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/messages/MessagesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/messages/SendMessage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/messages/SendMessage.vue" afterDir="false" />
@@ -69,7 +69,7 @@
       <updated>1660055002520</updated>
       <workItem from="1660055003799" duration="1141000" />
       <workItem from="1660400247682" duration="78281000" />
-      <workItem from="1661100370416" duration="16413000" />
+      <workItem from="1661100370416" duration="18998000" />
     </task>
     <servers />
   </component>
