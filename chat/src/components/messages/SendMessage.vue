@@ -31,16 +31,16 @@
   }
 
   &--small {
-    padding: 5px;
-    margin: 0;
-    width: 100%;
+    margin: 10px;
+    width: auto;
+    height: 50px;
 
     input {
       width: 100%;
     }
 
     img {
-      right: 5px;
+      right: 0;
     }
   }
 }

@@ -5,14 +5,13 @@
         hi
       </base-message>
     </div>
-    <div class="messages__item messages__item--left">
-      <base-message role="received">
-        hello
-      </base-message>
+    <div class="messages__item messages__item--right">
+      <base-message role="received">hello</base-message>
     </div>
-    <div class="messages__item messages__item--left">
+    <div class="messages__item messages__item--right">
       <base-message role="received">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at atque blanditiis culpa
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at
+        atque blanditiis culpa
         cumque cupiditate earum eius illo ipsum itaque, labore laborum minus natus non odio omnis, optio quidem.
       </base-message>
     </div>
@@ -21,9 +20,14 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur cum
       </base-message>
     </div>
-    <div class="messages__item messages__item--left">
+    <div class="messages__item messages__item--right">
       <base-message role="received">
         ok
+      </base-message>
+    </div>
+    <div class="messages__item">
+      <base-message role="sended">
+        quod temporibus, vero, voluptas, voluptatum.
       </base-message>
     </div>
     <!--      Add scroll to the last message-->
@@ -49,41 +53,41 @@ export default {
     flex-direction: column;
 
     &--small {
-      height: 320px;
-      margin: 3px;
+      height: 310px;
+      margin: 10px;
 
       .messages__item {
         max-width: 80%;
+        margin-right: 5px;
       }
     }
   }
 
   &__item {
     max-width: 45%;
-    margin: 2px 0;
+    margin: 5px 5px 5px 0;
 
-    &--left {
+    &--right {
       align-self: flex-end;
     }
   }
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-}
+  width: 8px;
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px #b7c4c9;
-  border-radius: 10px;
-}
+  &-track {
+    -webkit-box-shadow: inset 0 0 5px #b7c4c9;
+    border-radius: 10px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #b7c4c9;
-  border-radius: 10px;
-}
+  &-thumb {
+    background: #cdcbcb;
+    border-radius: 10px;
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 223, 67, 0.5);
+    &:hover {
+      background: rgba(255, 223, 67, 0.5);
+    }
+  }
 }
-
 </style>

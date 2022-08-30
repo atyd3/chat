@@ -27,7 +27,7 @@ export default {
 
   &__item {
     &--active {
-      background: linear-gradient(90deg, rgba(205, 203, 203, 0.25) 25%, rgba(205, 203, 203, 1) 75%);
+      background: #cdcbcb;
       box-shadow: none;
     }
   }
@@ -36,7 +36,7 @@ export default {
 
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 
   &-track {
     -webkit-box-shadow: inset 0 0 5px #b7c4c9;
@@ -44,7 +44,7 @@ export default {
   }
 
   &-thumb {
-    background: #b7c4c9;
+    background: #cdcbcb;
     border-radius: 10px;
 
     &:hover {

@@ -3,7 +3,7 @@
     <base-card>
       <user-bar class="status-bar__small"></user-bar>
       <messages-list class="messages__list--small"></messages-list>
-      <send-message class="send send--small"></send-message>
+      <send-message class="send--small"></send-message>
     </base-card>
   </div>
 </template>
@@ -12,14 +12,11 @@
 .popup-container {
   position: fixed;
   right: 5%;
-  bottom: 10px;
+  bottom: -10px;
 
   width: 320px;
-  height: 425px;
 
   background-color: white;
-
-
 }
 </style>
 <script>
