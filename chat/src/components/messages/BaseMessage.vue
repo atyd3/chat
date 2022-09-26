@@ -21,7 +21,7 @@ div {
   display: inline-block;
 }
 
-.sended {
+.sent {
   background-color: #cdcbcb;
 }
 

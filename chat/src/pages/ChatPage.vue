@@ -1,11 +1,11 @@
 <template>
   <base-card class="grid-container">
-    <chat-settings class="right-shadow"></chat-settings>
-    <chat-list class="grid-container__left right-shadow"></chat-list>
+    <chat-settings class="right-shadow left"></chat-settings>
+    <chat-list class="grid-container__left right-shadow left"></chat-list>
 
-    <user-bar></user-bar>
-    <messages-list class="messages"></messages-list>
-    <send-message class="grid-container__right"></send-message>
+    <user-bar class="right"></user-bar>
+    <messages-list class="messages right"></messages-list>
+    <send-message class="grid-container__right right"></send-message>
   </base-card>
 </template>
 <script>
@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/_mixins.scss";
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -32,6 +34,11 @@ export default {
   margin: 2rem auto;
   width: 90%;
 
+  @include respond(phone){
+    display: flex;
+    flex-direction: column;
+  }
+
   &__right {
     grid-column: 2/3;
   }
@@ -41,7 +48,22 @@ export default {
   }
 
   .right-shadow {
-    box-shadow: 13px 0px 11px -12px rgba(0, 0, 0, .12);
+    box-shadow: 13px 0px 11px -10px rgba(0, 0, 0, .12);
+
+    @include respond(phone) {
+      box-shadow: none;
+    }
+
+  }
+
+  .left {
+
+  }
+
+  .right {
+    @include respond(phone){
+      display: none;
+    }
   }
 }
 

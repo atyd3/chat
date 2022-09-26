@@ -2,13 +2,26 @@
   <div class="container">
     <div class="flex">
       <img src="../../assets/avatar.png" width="100" height="100">
-      <h3 class="cut">Username</h3>
+      <h3 class="cut">{{ username }}</h3>
     </div>
-    <p class="cut">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laudantium nulla odit. Aliquid
-      asperiores aspernatur, dolore dolores et fugit ipsa magni nesciunt nihil quasi soluta tempore? Consequatur harum
-      pariatur repudiandae.</p>
+    <p class="cut">{{ lastMessage }}</p>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    username: {
+      type: String,
+      required: true
+    },
+    lastMessage: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
 
 
 <style lang="scss" scoped>

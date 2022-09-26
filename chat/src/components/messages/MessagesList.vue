@@ -1,8 +1,8 @@
 <template>
   <div class="messages__list">
     <div class="messages__item">
-      <base-message role="sended">
-        hi
+      <base-message role="sent">
+        <p>hi</p>
       </base-message>
     </div>
     <div class="messages__item messages__item--right">
@@ -10,24 +10,24 @@
     </div>
     <div class="messages__item messages__item--right">
       <base-message role="received">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at
-        atque blanditiis culpa
-        cumque cupiditate earum eius illo ipsum itaque, labore laborum minus natus non odio omnis, optio quidem.
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at atque blanditiis culpa
+          cumque cupiditate earum eius illo ipsum itaque, labore laborum minus natus non odio omnis, optio quidem.</p>
       </base-message>
     </div>
     <div class="messages__item">
-      <base-message role="sended">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur cum
+      <base-message role="sent">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur
+          cum</p>
       </base-message>
     </div>
     <div class="messages__item messages__item--right">
       <base-message role="received">
-        ok
+        <p>ok</p>
       </base-message>
     </div>
     <div class="messages__item">
-      <base-message role="sended">
-        quod temporibus, vero, voluptas, voluptatum.
+      <base-message role="sent">
+        <p>quod temporibus, vero, voluptas, voluptatum.</p>
       </base-message>
     </div>
     <!--      Add scroll to the last message-->
@@ -38,11 +38,17 @@ import BaseMessage from "@/components/messages/BaseMessage";
 
 export default {
   components: {BaseMessage},
+  data() {
+    return {
+
+  }}
 }
 
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/_mixins.scss";
+
 
 .messages {
   &__list {
@@ -66,6 +72,10 @@ export default {
   &__item {
     max-width: 45%;
     margin: 5px 5px 5px 0;
+
+    @include respond(tab-port) {
+      max-width: 80%;
+    }
 
     &--right {
       align-self: flex-end;

@@ -1,20 +1,67 @@
 <template>
   <div class="chat__list">
-    <chat-item></chat-item>
-    <chat-item class="chat__item chat__item--active"></chat-item>
-    <chat-item></chat-item>
-    <chat-item></chat-item>
-    <chat-item></chat-item>
-    <chat-item></chat-item>
-    <chat-item></chat-item>
+    <chat-item
+        v-for="chat in chats"
+        :key="chat"
+        :username="chat.username"
+        :lastMessage="chat.lastMessage.value"
+        :class="{ 'chat__item--active': isActive === chat }"
+        @click="activate(chat)"
+    ></chat-item>
   </div>
 </template>
 
 <script>
 import ChatItem from "@/components/chats/ChatItem";
+import messages from './../../../messages.json';
 
 export default {
-  components: {ChatItem}
+  components: {ChatItem},
+  data() {
+    return {
+      messages: messages,
+      chats: [],
+      activeChat: null
+    }
+  },
+  methods: {
+    activate(chat) {
+      this.activeChat = chat
+      console.log(chat)
+    },
+    fetchChats() {
+      for (let data of messages.data) {
+        data.lastMessage = this.getLastMessage(data.received, data.sent);
+        this.chats.push(data);
+      }
+    },
+    getLastMessage() {
+      let lastMessage = {
+        key: 0,
+        value: ''
+      }
+      for (let i = 0; i < arguments.length; i++) {
+        Object.entries(arguments[i]).forEach(([key, value]) => {
+          if (key > lastMessage.key) {
+            lastMessage.key = key;
+            lastMessage.value = value;
+          }
+        });
+      }
+      return lastMessage
+    }
+  },
+  created() {
+    this.fetchChats();
+  },
+  computed: {
+    isActive(){
+      if (!this.activeChat){
+      return this.chats[0]
+      }
+      return this.activeChat
+    }
+  }
 }
 </script>
 
@@ -31,7 +78,6 @@ export default {
       box-shadow: none;
     }
   }
-
 }
 
 
