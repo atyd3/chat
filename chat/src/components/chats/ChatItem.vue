@@ -13,11 +13,11 @@ export default {
   props: {
     username: {
       type: String,
-      required: true
+      // required: true
     },
     lastMessage: {
       type: String,
-      required: true
+      // required: true
     }
   }
 }

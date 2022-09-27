@@ -5,8 +5,44 @@
 
 <script>
 import TheHeader from "@/components/layout/TheHeader";
+import messages from "../messages.json";
+
 export default {
-components: {TheHeader},
+  components: {TheHeader},
+  data() {
+    return {
+      chats: [],
+    }
+  },
+  methods: {
+    fetchChats() {
+      for (let data of messages.data) {
+        data.lastMessage = this.getLastMessage(data.received, data.sent);
+        this.chats.push(data);
+      }
+    },
+    getLastMessage() {
+      let lastMessage = {
+        key: 0,
+        value: ''
+      }
+      for (let i = 0; i < arguments.length; i++) {
+        Object.entries(arguments[i]).forEach(([key, value]) => {
+          if (key > lastMessage.key) {
+            lastMessage.key = key;
+            lastMessage.value = value;
+          }
+        });
+      }
+      return lastMessage;
+    }
+  },
+  provide(){
+    return { 'chats': this.chats }
+  },
+  created() {
+    this.fetchChats();
+  },
 }
 </script>
 

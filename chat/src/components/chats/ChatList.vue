@@ -13,46 +13,20 @@
 
 <script>
 import ChatItem from "@/components/chats/ChatItem";
-import messages from './../../../messages.json';
 
 export default {
   components: {ChatItem},
+  inject: ['chats'],
   data() {
     return {
-      messages: messages,
-      chats: [],
       activeChat: null
     }
   },
   methods: {
     activate(chat) {
       this.activeChat = chat
-      console.log(chat)
     },
-    fetchChats() {
-      for (let data of messages.data) {
-        data.lastMessage = this.getLastMessage(data.received, data.sent);
-        this.chats.push(data);
-      }
-    },
-    getLastMessage() {
-      let lastMessage = {
-        key: 0,
-        value: ''
-      }
-      for (let i = 0; i < arguments.length; i++) {
-        Object.entries(arguments[i]).forEach(([key, value]) => {
-          if (key > lastMessage.key) {
-            lastMessage.key = key;
-            lastMessage.value = value;
-          }
-        });
-      }
-      return lastMessage
-    }
-  },
-  created() {
-    this.fetchChats();
+
   },
   computed: {
     isActive(){
@@ -61,7 +35,7 @@ export default {
       }
       return this.activeChat
     }
-  }
+  },
 }
 </script>
 

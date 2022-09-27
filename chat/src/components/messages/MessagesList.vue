@@ -38,10 +38,6 @@ import BaseMessage from "@/components/messages/BaseMessage";
 
 export default {
   components: {BaseMessage},
-  data() {
-    return {
-
-  }}
 }
 
 </script>
