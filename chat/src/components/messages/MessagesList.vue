@@ -6,7 +6,7 @@
       </base-message>
     </div>
     <div class="messages__item messages__item--right">
-      <base-message role="received">hello</base-message>
+      <base-message role="received"><p>hello</p></base-message>
     </div>
     <div class="messages__item messages__item--right">
       <base-message role="received">

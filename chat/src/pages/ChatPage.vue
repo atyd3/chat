@@ -1,12 +1,13 @@
 <template>
   <base-card class="grid-container">
     <chat-settings class="right-shadow left"></chat-settings>
-    <chat-list class="grid-container__left right-shadow left"></chat-list>
+    <chat-list class="grid-container__left right-shadow left" :isActive="currentChat" @openChat="openChat"></chat-list>
 
-    <user-bar class="right"></user-bar>
+    <user-bar class="right" :user="currentUser"></user-bar>
     <messages-list class="messages right"></messages-list>
     <send-message class="grid-container__right right"></send-message>
   </base-card>
+    <pre>{{currentChat}}</pre>
 </template>
 <script>
 import BaseCard from "@/components/UI/BaseCard"
@@ -17,7 +18,36 @@ import MessagesList from "@/components/messages/MessagesList";
 import SendMessage from "@/components/messages/SendMessage";
 
 export default {
-  components: {BaseCard, SendMessage, MessagesList, UserBar, ChatList, ChatSettings}
+  components: { BaseCard, SendMessage, MessagesList, UserBar, ChatList, ChatSettings },
+  inject: ['chats'],
+  data() {
+    return {
+      currentChat: null
+    }
+  },
+  methods: {
+    activeChat(chat){
+      this.currentChat = chat;
+    },
+    openChat(chat){
+      this.currentChat = chat;
+    }
+  },
+  computed: {
+    currentUser(){
+      return this.currentChat.username
+    }
+  },
+  watch: {
+      currentChat(newChat, oldChat) {
+        if (newChat !== oldChat) {
+          this.activeChat(this.currentChat);
+        }
+      }
+    },
+  created() {
+      this.activeChat(this.chats[0]);
+    }
 }
 </script>
 

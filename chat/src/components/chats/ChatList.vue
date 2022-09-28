@@ -6,7 +6,7 @@
         :username="chat.username"
         :lastMessage="chat.lastMessage.value"
         :class="{ 'chat__item--active': isActive === chat }"
-        @click="activate(chat)"
+        @click="openChat(chat)"
     ></chat-item>
   </div>
 </template>
@@ -15,27 +15,16 @@
 import ChatItem from "@/components/chats/ChatItem";
 
 export default {
-  components: {ChatItem},
+  components: { ChatItem },
+  emits: ['open-chat'],
   inject: ['chats'],
-  data() {
-    return {
-      activeChat: null
-    }
-  },
+  props: ['isActive'],
   methods: {
-    activate(chat) {
-      this.activeChat = chat
-    },
-
-  },
-  computed: {
-    isActive(){
-      if (!this.activeChat){
-      return this.chats[0]
-      }
-      return this.activeChat
+    openChat(chat) {
+      this.$emit('open-chat', chat);
+      console.log(chat)
     }
-  },
+  }
 }
 </script>
 

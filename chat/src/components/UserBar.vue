@@ -2,7 +2,7 @@
   <div class="status-bar">
     <img src="../assets/avatar.png" width="100" height="100">
     <div class="status-container">
-      <h3>Username</h3>
+      <h3>{{user}}</h3>
       <p>online</p>
     </div>
     <div class="close-icon">
@@ -10,6 +10,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    user: {
+      // type: String,
+      // required: true
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .status-bar {
