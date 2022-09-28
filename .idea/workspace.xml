@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/src/components/UserBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/UserBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/messages.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat/messages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/chats/ChatList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/chats/ChatList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/messages/MessagesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/messages/MessagesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/pages/ChatPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/pages/ChatPage.vue" afterDir="false" />
@@ -69,7 +69,7 @@
       <workItem from="1663426006525" duration="5000" />
       <workItem from="1663760956054" duration="508000" />
       <workItem from="1663836970662" duration="27000" />
-      <workItem from="1664184544963" duration="26659000" />
+      <workItem from="1664184544963" duration="35172000" />
     </task>
     <servers />
   </component>

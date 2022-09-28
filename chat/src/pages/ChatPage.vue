@@ -4,10 +4,9 @@
     <chat-list class="grid-container__left right-shadow left" :isActive="currentChat" @openChat="openChat"></chat-list>
 
     <user-bar class="right" :user="currentUser"></user-bar>
-    <messages-list class="messages right"></messages-list>
+    <messages-list class="messages right" :messages="messages"></messages-list>
     <send-message class="grid-container__right right"></send-message>
   </base-card>
-    <pre>{{currentChat}}</pre>
 </template>
 <script>
 import BaseCard from "@/components/UI/BaseCard"
@@ -22,7 +21,8 @@ export default {
   inject: ['chats'],
   data() {
     return {
-      currentChat: null
+      currentChat: null,
+      messages: []
     }
   },
   methods: {
@@ -42,6 +42,7 @@ export default {
       currentChat(newChat, oldChat) {
         if (newChat !== oldChat) {
           this.activeChat(this.currentChat);
+          this.messages = [{'received': this.currentChat.received}, {'sent': this.currentChat.sent}]
         }
       }
     },

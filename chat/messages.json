@@ -11,7 +11,7 @@
       "sent":
         {
           "3": "hello",
-          "5": "ok ----"
+          "5": "ok"
         }
     },
     {
@@ -27,14 +27,15 @@
       "username": "User3",
       "received":
       {
-        "1": "1st message",
-        "2": "2nd mess",
-        "4": "4th mess"
+        "1": "hi",
+        "3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at atque blanditiis culpa cumque cupiditate earum eius illo ipsum itaque, labore laborum minus natus non odio omnis, optio quidem.",
+        "5": "ok"
       },
       "sent":
       {
-        "3": "3th mess",
-        "5": "5th - last mess ---"
+        "2": "hello",
+        "4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur cum",
+        "6": "Quod temporibus, vero, voluptas, voluptatum"
       }
     },
     {

@@ -22,7 +22,6 @@ export default {
   methods: {
     openChat(chat) {
       this.$emit('open-chat', chat);
-      console.log(chat)
     }
   }
 }
@@ -42,7 +41,6 @@ export default {
     }
   }
 }
-
 
 ::-webkit-scrollbar {
   width: 8px;
