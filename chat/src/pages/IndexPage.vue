@@ -1,10 +1,10 @@
 <template>
 <div class="content-container"></div>
   <div class="chat-nav">
-    <nav-list></nav-list>
+    <nav-list @showPopup="showPopup"></nav-list>
   </div>
-  <div class="chat-popup">
-    <chat-popup></chat-popup>
+  <div class="chat-popup" v-if="popupIsOpen">
+    <chat-popup :chat="currentChat"></chat-popup>
   </div>
 </template>
 
@@ -14,7 +14,22 @@ import NavList from "@/components/nav/NavList";
 import ChatPopup from "@/components/chats/ChatPopup";
 
 export default {
-  components: {NavList, ChatPopup}
+  components: {NavList, ChatPopup},
+  inject: ['chats'],
+  data(){
+    return {
+      popupIsOpen: false,
+      currentChat: null
+    }
+  },
+  methods: {
+    showPopup(chat){
+      this.popupIsOpen = true;
+      this.currentChat = chat;
+      console.log(chat)
+      console.log('index chat',this.currentChat)
+    }
+  }
 }
 </script>
 

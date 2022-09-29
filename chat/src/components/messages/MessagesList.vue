@@ -69,6 +69,11 @@ export default {
         this.createList();
       }
     }
+  },
+  created(){
+    if(this.messages[0]){
+      this.createList()
+    }
   }
 }
 

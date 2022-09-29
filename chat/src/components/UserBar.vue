@@ -15,9 +15,12 @@
 export default {
   props: {
     user: {
-      // type: String,
-      // required: true
+      type: String,
+      required: false
     }
+  },
+  created(){
+    console.log('userbar')
   }
 }
 </script>
