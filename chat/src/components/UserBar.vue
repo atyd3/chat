@@ -5,7 +5,7 @@
       <h3>{{user}}</h3>
       <p>online</p>
     </div>
-    <div class="close-icon">
+    <div class="close-icon" @click="closeChat">
       <span>&#10005;</span>
     </div>
   </div>
@@ -13,14 +13,18 @@
 
 <script>
 export default {
+  emits: ['close-chat'],
   props: {
     user: {
       type: String,
       required: false
     }
   },
-  created(){
-    console.log('userbar')
+  methods: {
+    closeChat(){
+      this.$emit('close-chat');
+      console.log('close-chat')
+    }
   }
 }
 </script>

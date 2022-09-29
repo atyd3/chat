@@ -4,10 +4,9 @@
     <nav-list @showPopup="showPopup"></nav-list>
   </div>
   <div class="chat-popup" v-if="popupIsOpen">
-    <chat-popup :chat="currentChat"></chat-popup>
+    <chat-popup :chat="currentChat" @closeChat="hidePopup"></chat-popup>
   </div>
 </template>
-
 
 <script>
 import NavList from "@/components/nav/NavList";
@@ -26,8 +25,10 @@ export default {
     showPopup(chat){
       this.popupIsOpen = true;
       this.currentChat = chat;
-      console.log(chat)
-      console.log('index chat',this.currentChat)
+    },
+    hidePopup(){
+      console.log('hidepopup')
+      this.popupIsOpen = false;
     }
   }
 }

@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/messages.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat/messages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/UserBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/UserBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/src/components/chats/ChatItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/chats/ChatItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/chats/ChatPopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/chats/ChatPopup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/src/components/messages/MessagesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/messages/MessagesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/nav/NavItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/nav/NavItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/components/nav/NavList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/components/nav/NavList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/src/pages/IndexPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/chat/src/pages/IndexPage.vue" afterDir="false" />
@@ -73,7 +70,7 @@
       <workItem from="1663426006525" duration="5000" />
       <workItem from="1663760956054" duration="508000" />
       <workItem from="1663836970662" duration="27000" />
-      <workItem from="1664184544963" duration="40784000" />
+      <workItem from="1664184544963" duration="42990000" />
     </task>
     <servers />
   </component>
