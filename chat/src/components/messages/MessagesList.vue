@@ -1,41 +1,10 @@
 <template>
-  <div class="messages__list" @click="createList">
+  <div class="messages__list">
     <div :class="['messages__item', message[0] === 'received' ? 'messages__item--right': '']" v-for="message in messagesList" :key="message">
       <base-message :role="message[0]" >
         <p>{{message[2]}}</p>
       </base-message>
     </div>
-    <!--    <div class="messages__item">-->
-    <!--      <base-message role="sent">-->
-    <!--        <p>hi</p>-->
-    <!--      </base-message>-->
-    <!--    </div>-->
-<!--        <div class="messages__item messages__item&#45;&#45;right">-->
-<!--          <base-message role="received"><p>hello</p></base-message>-->
-<!--        </div>-->
-    <!--    <div class="messages__item messages__item&#45;&#45;right">-->
-    <!--      <base-message role="received">-->
-    <!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at atque blanditiis culpa-->
-    <!--          cumque cupiditate earum eius illo ipsum itaque, labore laborum minus natus non odio omnis, optio quidem.</p>-->
-    <!--      </base-message>-->
-    <!--    </div>-->
-    <!--    <div class="messages__item">-->
-    <!--      <base-message role="sent">-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium assumenda consequatur-->
-<!--              cum</p>-->
-    <!--      </base-message>-->
-    <!--    </div>-->
-    <!--    <div class="messages__item messages__item&#45;&#45;right">-->
-    <!--      <base-message role="received">-->
-    <!--        <p>ok</p>-->
-    <!--      </base-message>-->
-    <!--    </div>-->
-    <!--    <div class="messages__item">-->
-    <!--      <base-message role="sent">-->
-    <!--        <p>quod temporibus, vero, voluptas, voluptatum.</p>-->
-    <!--      </base-message>-->
-    <!--    </div>-->
-    <!--      Add scroll to the last message-->
   </div>
 </template>
 <script>
@@ -61,18 +30,24 @@ export default {
         this.messagesList.push(["sent", message, sent[message]])
       }
       this.messagesList.sort((a, b) => a[1] - b[1]);
+    },
+    scroll(){
+     const lastMessage = this.$el.querySelector('.messages__item:last-child');
+     lastMessage.scrollIntoView();
     }
   },
   watch: {
-    messages: function(newChat, oldChat) {
-      if (newChat !== oldChat) {
-        this.createList();
+    messages: async function(newChat, oldChat) {
+      if (newChat || oldChat) {
+        await this.createList();
       }
+        this.scroll()
     }
   },
-  created(){
+  async created(){
     if(this.messages[0]){
-      this.createList()
+      await this.createList();
+      this.scroll()
     }
   }
 }

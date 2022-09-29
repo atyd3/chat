@@ -4,7 +4,6 @@ import router from './router.js'
 
 const app = createApp(App)
 
-// components
 app.use(router)
 
 app.mount('#app')
