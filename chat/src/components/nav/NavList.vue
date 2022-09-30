@@ -1,5 +1,5 @@
 <template>
-  <nav-item v-for="chat in chats" :key="chat" @click="showPopup(chat)"></nav-item>
+  <nav-item v-for="chat in chats" :key="chat" @click="showPopup(chat)" :user="chat"></nav-item>
 </template>
 <script>
 import NavItem from "@/components/nav/NavItem";

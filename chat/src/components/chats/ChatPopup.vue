@@ -53,11 +53,10 @@ export default {
 <style lang="scss" scoped>
 .popup-container {
   position: fixed;
-  right: 5%;
+  right: 70px;
   bottom: -10px;
-
   width: 320px;
-
+  z-index:8;
   background-color: white;
 }
 </style>
