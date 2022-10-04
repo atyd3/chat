@@ -23,8 +23,13 @@ export default {
       this.messagesList = [];
       const {received} = this.messages[0];
       const {sent} = this.messages[1];
+      const {unread} = this.messages[2];
+      console.log('unread',unread);
       for (const message in received){
         this.messagesList.push(["received", message, received[message]])
+      }
+      for (const message in unread){
+        this.messagesList.push(["received", message, unread[message]])
       }
       for (const message in sent){
         this.messagesList.push(["sent", message, sent[message]])

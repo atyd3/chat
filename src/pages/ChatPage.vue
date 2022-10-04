@@ -17,7 +17,7 @@ import MessagesList from "@/components/messages/MessagesList";
 import SendMessage from "@/components/messages/SendMessage";
 
 export default {
-  components: { BaseCard, SendMessage, MessagesList, UserBar, ChatList, ChatSettings },
+  components: {BaseCard, SendMessage, MessagesList, UserBar, ChatList, ChatSettings},
   inject: ['chats'],
   data() {
     return {
@@ -26,29 +26,29 @@ export default {
     }
   },
   methods: {
-    activeChat(chat){
+    activeChat(chat) {
       this.currentChat = chat;
     },
-    openChat(chat){
+    openChat(chat) {
       this.currentChat = chat;
     }
   },
   computed: {
-    currentUser(){
+    currentUser() {
       return this.currentChat.username
     }
   },
   watch: {
-      currentChat(newChat, oldChat) {
-        if (newChat !== oldChat) {
-          this.activeChat(this.currentChat);
-          this.messages = [{'received': this.currentChat.received}, {'sent': this.currentChat.sent}]
-        }
+    currentChat(newChat, oldChat) {
+      if (newChat !== oldChat) {
+        this.activeChat(this.currentChat);
+        this.messages = [{'received': this.currentChat.received}, {'sent': this.currentChat.sent}, {'unread': this.currentChat.unread}]
       }
-    },
-  created() {
-      this.activeChat(this.chats[0]);
     }
+  },
+  created() {
+    this.activeChat(this.chats[0]);
+  }
 }
 </script>
 
@@ -65,7 +65,7 @@ export default {
   margin: 2rem auto;
   width: 90%;
 
-  @include respond(phone){
+  @include respond(phone) {
     display: flex;
     flex-direction: column;
   }
@@ -92,7 +92,7 @@ export default {
   }
 
   .right {
-    @include respond(phone){
+    @include respond(phone) {
       display: none;
     }
   }

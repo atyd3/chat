@@ -17,7 +17,7 @@ export default {
   methods: {
     fetchChats() {
       for (let data of messages.data) {
-        data.lastMessage = this.getLastMessage(data.received, data.sent);
+        data.lastMessage = this.getLastMessage(data.received, data.sent, data.unread);
         this.chats.push(data);
       }
     },
@@ -28,7 +28,7 @@ export default {
       }
       for (let i = 0; i < arguments.length; i++) {
         Object.entries(arguments[i]).forEach(([key, value]) => {
-          if (key > lastMessage.key) {
+            if (key > lastMessage.key) {
             lastMessage.key = key;
             lastMessage.value = value;
           }

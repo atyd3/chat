@@ -37,13 +37,13 @@ export default {
   },
   created(){
     this.username = this.chat.username;
-    this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}]
+    this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}, {'unread': this.chat.unread}]
   },
   watch: {
     chat: function(newChat, oldChat) {
       if (newChat !== oldChat){
         this.username = this.chat.username;
-        this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}]
+        this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}, {'unread': this.chat.unread}]
       }
     }
   }

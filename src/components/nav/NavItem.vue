@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar-container tooltip" data-badge="3">
+  <div class="avatar-container tooltip" :data-badge="badge > 0 ? badge : null">
     <img src="../../assets/avatar.png" alt="user avatar" width="100" height="100">
     <div class="left">
       <p>{{user.username}}</p>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  props: ['user']
+  props: ['user', 'badge']
 }
 </script>
 
