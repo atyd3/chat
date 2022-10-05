@@ -5,7 +5,7 @@
         :key="chat"
         :username="chat.username"
         :lastMessage="chat.lastMessage.value"
-        :class="{ 'chat__item--active': isActive === chat }"
+        :class="{ 'chat__item--active' : isActive === chat }"
         @click="openChat(chat)"
     ></chat-item>
   </div>
@@ -23,7 +23,12 @@ export default {
     openChat(chat) {
       this.$emit('open-chat', chat);
     }
-  }
+  },
+  // created(){
+  //   for (let chat of this.chats){
+  //     console.log(chat)
+  //   }
+  // }
 }
 </script>
 

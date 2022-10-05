@@ -24,7 +24,6 @@ export default {
       const {received} = this.messages[0];
       const {sent} = this.messages[1];
       const {unread} = this.messages[2];
-      console.log('unread',unread);
       for (const message in received){
         this.messagesList.push(["received", message, received[message]])
       }
@@ -70,6 +69,10 @@ export default {
     display: flex;
     margin: 10px 0 10px 15px;
     flex-direction: column;
+
+    @include respond(phone){
+      margin-left: 0;
+    }
 
     &--small {
       height: 310px;

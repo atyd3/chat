@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chats/ChatPopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chats/ChatPopup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chats/ChatList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chats/ChatList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/TheHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/messages/MessagesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messages/MessagesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav/NavItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav/NavList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/NavList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/messages/SendMessage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messages/SendMessage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ChatPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ChatPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/IndexPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/IndexPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,7 @@
       <workItem from="1663836970662" duration="27000" />
       <workItem from="1664184544963" duration="56121000" />
       <workItem from="1664787709008" duration="413000" />
-      <workItem from="1664788213266" duration="9265000" />
+      <workItem from="1664788213266" duration="18470000" />
     </task>
     <servers />
   </component>

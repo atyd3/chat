@@ -34,7 +34,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/styles/_mixins.scss";
+
 .content-container {
   width: 90%;
   margin: 3rem auto;
@@ -49,6 +51,11 @@ export default {
   right: 10px;
   bottom: 10px;
   z-index:10;
+
+  @include respond(phone){
+    display: none;
+  }
+
 }
 </style>
 

@@ -14,6 +14,8 @@
 
 
 <style lang="scss" scoped>
+@import "@/styles/_mixins.scss";
+
 .nav {
   background-color: #222222;
   width: 100%;
@@ -62,6 +64,10 @@
 
     h2 {
       color: white;
+    }
+
+    @include respond(phone){
+      display: none;
     }
   }
 

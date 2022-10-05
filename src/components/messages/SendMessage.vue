@@ -6,16 +6,25 @@
 </template>
 
 <style lang="scss" scoped>
+@import "@/styles/_mixins.scss";
+
 .send {
   position: relative;
   width: 100%;
   margin: 10px 0 0 15px;
+  @include respond(phone){
+    margin: 0;
+  }
 
   img {
     width: 40px;
     position: absolute;
     right: 15px;
     padding: 5px;
+
+    @include respond(phone){
+      right: 0;
+    }
   }
 
   input {
@@ -24,6 +33,10 @@
     border-radius: 5px;
     width: calc(100% - 15px);
     font: 0.9rem Roboto, sans-serif;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;

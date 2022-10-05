@@ -1,11 +1,12 @@
 <template>
   <base-card class="grid-container">
-    <chat-settings class="right-shadow left"></chat-settings>
-    <chat-list class="grid-container__left right-shadow left" :isActive="currentChat" @openChat="openChat"></chat-list>
+    <chat-settings :class="['right-shadow', 'left', {'hide': displayMessages}]"></chat-settings>
+    <chat-list :class="['grid-container__left', 'right-shadow', 'left', {'hide': displayMessages}]"
+               :isActive="currentChat" @openChat="openChat"></chat-list>
 
-    <user-bar class="right" :user="currentUser"></user-bar>
-    <messages-list class="messages right" :messages="messages"></messages-list>
-    <send-message class="grid-container__right right"></send-message>
+    <user-bar :class="['right', {'hide': !displayMessages}]" :user="currentUser" @navigateBack="showMessagesList"></user-bar>
+    <messages-list :class="['messages','right', {'hide': !displayMessages}]" :messages="messages"></messages-list>
+    <send-message :class="['grid-container__right', 'right', {'hide': !displayMessages}]"></send-message>
   </base-card>
 </template>
 <script>
@@ -22,7 +23,8 @@ export default {
   data() {
     return {
       currentChat: null,
-      messages: []
+      messages: [],
+      displayMessages: false,
     }
   },
   methods: {
@@ -31,6 +33,11 @@ export default {
     },
     openChat(chat) {
       this.currentChat = chat;
+      this.displayMessages = true;
+    },
+    showMessagesList(){
+      this.displayMessages = false;
+      console.log('click2')
     }
   },
   computed: {
@@ -48,12 +55,26 @@ export default {
   },
   created() {
     this.activeChat(this.chats[0]);
+    this.displayMessages = false;
+    console.log('created')
   }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "@/styles/_mixins.scss";
+
+.hide {
+  @include respond(phone) {
+    display: none
+  }
+}
+
+.messages {
+  @include respond(phone) {
+    height: 100%;
+  }
+}
 
 .grid-container {
   display: grid;
@@ -68,6 +89,7 @@ export default {
   @include respond(phone) {
     display: flex;
     flex-direction: column;
+    height: 85vh;
   }
 
   &__right {
@@ -85,16 +107,6 @@ export default {
       box-shadow: none;
     }
 
-  }
-
-  .left {
-
-  }
-
-  .right {
-    @include respond(phone) {
-      display: none;
-    }
   }
 }
 
