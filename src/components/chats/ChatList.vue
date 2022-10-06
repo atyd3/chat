@@ -5,6 +5,7 @@
         :key="chat"
         :username="chat.username"
         :lastMessage="chat.lastMessage.value"
+        :unread="Object.keys(chat.unread).length"
         :class="{ 'chat__item--active' : isActive === chat }"
         @click="openChat(chat)"
     ></chat-item>
@@ -24,15 +25,12 @@ export default {
       this.$emit('open-chat', chat);
     }
   },
-  // created(){
-  //   for (let chat of this.chats){
-  //     console.log(chat)
-  //   }
-  // }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/_mixins.scss";
+
 .chat {
   &__list {
     overflow-y: auto;
@@ -43,6 +41,11 @@ export default {
     &--active {
       background: #cdcbcb;
       box-shadow: none;
+
+      @include respond(phone){
+        background: none;
+        box-shadow: 0px 13px 11px -12px rgba(0,0,0,.12);
+      }
     }
   }
 }

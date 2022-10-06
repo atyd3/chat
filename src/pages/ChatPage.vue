@@ -80,18 +80,26 @@ export default {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 2fr 15fr 1fr;
-  height: 70vh;
 
+  height: 70vh;
   padding: 1rem;
   margin: 2rem auto;
   width: 90%;
 
+
+  @include respond(tab-land){
+    grid-template-columns: 1fr 2fr;
+    margin: 2rem 1rem;
+    width: auto;
+  }
+
   @include respond(phone) {
     display: flex;
     flex-direction: column;
-    height: 85vh;
+    height: calc(100vh - 51px);
+    width: 100%;
+    margin: 0;
   }
-
   &__right {
     grid-column: 2/3;
   }
@@ -106,7 +114,6 @@ export default {
     @include respond(phone) {
       box-shadow: none;
     }
-
   }
 }
 

@@ -10,7 +10,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/styles/_mixins.scss";
 
 div {
   border-radius: 10px;
@@ -19,6 +20,10 @@ div {
   word-break: break-word;
   font: 0.9rem Roboto,sans-serif;
   display: inline-block;
+
+  @include respond(phone){
+    font-size: 1rem;
+  }
 }
 
 .sent {
