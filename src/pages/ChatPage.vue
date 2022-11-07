@@ -5,7 +5,7 @@
                :isActive="currentChat" @openChat="openChat"></chat-list>
 
     <user-bar :class="['right', { 'hide': !displayMessages }]" :user="currentUser"
-              @navigateBack="showMessagesList"></user-bar>
+              @navigateBack="showUsersList"></user-bar>
     <messages-list :class="['messages','right', { 'hide': !displayMessages } ]" :messages="messages"></messages-list>
     <send-message :class="['grid-container__right', 'right', { 'hide': !displayMessages } ]"></send-message>
   </base-card>
@@ -18,8 +18,8 @@ import MessagesList from "@/components/messages/MessagesList";
 import SendMessage from "@/components/messages/SendMessage";
 
 export default {
-  components: { SendMessage, MessagesList, UserBar, ChatList, ChatSettings },
-  inject: { chats: 'chats' },
+  components: {SendMessage, MessagesList, UserBar, ChatList, ChatSettings},
+  inject: {chats: 'chats'},
   data() {
     return {
       currentChat: this.chats[0],
@@ -31,9 +31,9 @@ export default {
     openChat(chat) {
       this.currentChat = chat;
       this.displayMessages = true;
-      this.messages = [{ 'received': this.currentChat.received }, { 'sent': this.currentChat.sent }, { 'unread': this.currentChat.unread }]
+      this.messages = [{'received': this.currentChat.received}, {'sent': this.currentChat.sent}, {'unread': this.currentChat.unread}]
     },
-    showMessagesList(){
+    showUsersList() {
       this.displayMessages = false;
     }
   },
@@ -44,12 +44,13 @@ export default {
   },
   watch: {
     currentChat(nChat) {
-        this.openChat(nChat);
+      this.openChat(nChat);
     }
   },
   created() {
-    this.displayMessages = false;
-    this.openChat(this.currentChat)
+    if (window.innerWidth > 600) {
+      this.openChat(this.currentChat)
+    }
   }
 }
 </script>
@@ -79,7 +80,7 @@ export default {
   margin: 2rem auto;
   width: 90%;
 
-  @include respond(tab-land){
+  @include respond(tab-land) {
     grid-template-columns: 1fr 2fr;
     margin: 2rem 1rem;
     width: auto;
@@ -92,6 +93,7 @@ export default {
     width: 100%;
     margin: 0;
   }
+
   &__right {
     grid-column: 2/3;
   }

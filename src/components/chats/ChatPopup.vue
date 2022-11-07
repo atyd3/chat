@@ -30,7 +30,6 @@ export default {
   },
   methods: {
     closeChat(){
-      console.log('close-chat')
       this.$emit('close-chat')
     }
   },

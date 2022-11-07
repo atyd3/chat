@@ -29,7 +29,6 @@ export default {
     },
     navigateBack(){
       this.$emit('navigate-back');
-      console.log('click')
     }
   }
 }
