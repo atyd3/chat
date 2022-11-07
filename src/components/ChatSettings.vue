@@ -3,12 +3,10 @@
     <div class="settings-bar">
       <h2>Messages</h2>
       <div class="circle">
-      <!-- @click="open-dropdown" -->
       <img src="../assets/settings.svg"></div>
     </div>
     <div class="search">
       <img src="../assets/search.svg"/>
-      <!--replace with <img src="/icons/icon-search.svg">-->
       <input type="text" placeholder="Search">
     </div>
   </div>

@@ -18,7 +18,7 @@ import ChatItem from "@/components/chats/ChatItem";
 export default {
   components: { ChatItem },
   emits: ['open-chat'],
-  inject: ['chats'],
+  inject: [ 'chats' ],
   props: ['isActive'],
   methods: {
     openChat(chat) {

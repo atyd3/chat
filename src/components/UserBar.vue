@@ -42,7 +42,7 @@ export default {
   font: 1rem "Roboto", sans-serif;
   display: flex;
   position: relative;
-  box-shadow: 0px 13px 11px -12px rgba(0, 0, 0, .12);
+  box-shadow: 0 13px 11px -12px rgba(0, 0, 0, .12);
   padding-bottom: 10px;
 
   &__img {
@@ -51,7 +51,7 @@ export default {
     height: 60px;
     display: block;
     border: 5px solid #ffda47;
-    margin: 0px 10px 4px 15px;
+    margin: 0 10px 4px 15px;
 
     @include respond(phone){
       margin-left: 55px
@@ -62,8 +62,8 @@ export default {
     position: absolute;
     top: 10px;
     left: 80px;
-    @include respond(phone){
-    left: 120px
+    @include respond(phone) {
+      left: 120px;
     }
   }
 
@@ -71,17 +71,18 @@ export default {
     display: none;
   }
 
-
   .back-icon {
     position: absolute;
     top: 10px;
     display: none;
-@include respond(phone){
-  display: block;
-}
+
+    @include respond(phone) {
+      display: block;
+    }
+
     img {
       width: 40px;
-      padding: 0px;
+      padding: 0;
       transform: rotate(180deg)
     }
   }

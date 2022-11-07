@@ -13,7 +13,7 @@ import NavList from "@/components/nav/NavList";
 import ChatPopup from "@/components/chats/ChatPopup";
 
 export default {
-  components: {NavList, ChatPopup},
+  components: { NavList, ChatPopup },
   inject: ['chats'],
   data(){
     return {
@@ -27,7 +27,6 @@ export default {
       this.currentChat = chat;
     },
     hidePopup(){
-      console.log('hidepopup')
       this.popupIsOpen = false;
     }
   }
@@ -50,12 +49,11 @@ export default {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  z-index:10;
+  z-index: 10;
 
   @include respond(phone){
     display: none;
   }
-
 }
 </style>
 

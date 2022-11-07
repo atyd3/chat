@@ -1,16 +1,16 @@
 <template>
   <base-card class="grid-container">
-    <chat-settings :class="['right-shadow', 'left', {'hide': displayMessages}]"></chat-settings>
-    <chat-list :class="['grid-container__left', 'right-shadow', 'left', {'hide': displayMessages}]"
+    <chat-settings :class="['right-shadow', 'left', { 'hide': displayMessages }]"></chat-settings>
+    <chat-list :class="['grid-container__left', 'right-shadow', 'left', { 'hide': displayMessages }]"
                :isActive="currentChat" @openChat="openChat"></chat-list>
 
-    <user-bar :class="['right', {'hide': !displayMessages}]" :user="currentUser" @navigateBack="showMessagesList"></user-bar>
-    <messages-list :class="['messages','right', {'hide': !displayMessages}]" :messages="messages"></messages-list>
-    <send-message :class="['grid-container__right', 'right', {'hide': !displayMessages}]"></send-message>
+    <user-bar :class="['right', { 'hide': !displayMessages }]" :user="currentUser"
+              @navigateBack="showMessagesList"></user-bar>
+    <messages-list :class="['messages','right', { 'hide': !displayMessages } ]" :messages="messages"></messages-list>
+    <send-message :class="['grid-container__right', 'right', { 'hide': !displayMessages } ]"></send-message>
   </base-card>
 </template>
 <script>
-import BaseCard from "@/components/UI/BaseCard"
 import ChatSettings from "@/components/ChatSettings";
 import UserBar from "@/components/UserBar"
 import ChatList from "@/components/chats/ChatList";
@@ -18,45 +18,38 @@ import MessagesList from "@/components/messages/MessagesList";
 import SendMessage from "@/components/messages/SendMessage";
 
 export default {
-  components: {BaseCard, SendMessage, MessagesList, UserBar, ChatList, ChatSettings},
-  inject: ['chats'],
+  components: { SendMessage, MessagesList, UserBar, ChatList, ChatSettings },
+  inject: { chats: 'chats' },
   data() {
     return {
-      currentChat: null,
+      currentChat: this.chats[0],
       messages: [],
       displayMessages: false,
     }
   },
   methods: {
-    activeChat(chat) {
-      this.currentChat = chat;
-    },
     openChat(chat) {
       this.currentChat = chat;
       this.displayMessages = true;
+      this.messages = [{ 'received': this.currentChat.received }, { 'sent': this.currentChat.sent }, { 'unread': this.currentChat.unread }]
     },
     showMessagesList(){
       this.displayMessages = false;
-      console.log('click2')
     }
   },
   computed: {
     currentUser() {
-      return this.currentChat.username
+      return this.currentChat.username.toString();
     }
   },
   watch: {
-    currentChat(newChat, oldChat) {
-      if (newChat !== oldChat) {
-        this.activeChat(this.currentChat);
-        this.messages = [{'received': this.currentChat.received}, {'sent': this.currentChat.sent}, {'unread': this.currentChat.unread}]
-      }
+    currentChat(nChat) {
+        this.openChat(nChat);
     }
   },
   created() {
-    this.activeChat(this.chats[0]);
     this.displayMessages = false;
-    console.log('created')
+    this.openChat(this.currentChat)
   }
 }
 </script>
@@ -66,7 +59,7 @@ export default {
 
 .hide {
   @include respond(phone) {
-    display: none
+    display: none;
   }
 }
 
@@ -85,7 +78,6 @@ export default {
   padding: 1rem;
   margin: 2rem auto;
   width: 90%;
-
 
   @include respond(tab-land){
     grid-template-columns: 1fr 2fr;
@@ -109,12 +101,11 @@ export default {
   }
 
   .right-shadow {
-    box-shadow: 13px 0px 11px -10px rgba(0, 0, 0, .12);
+    box-shadow: 13px 0 11px -10px rgba(0, 0, 0, .12);
 
     @include respond(phone) {
       box-shadow: none;
     }
   }
 }
-
 </style>
