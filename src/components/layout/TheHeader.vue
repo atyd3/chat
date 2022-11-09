@@ -2,7 +2,7 @@
   <div class="nav">
     <div class="nav__container">
       <div class="logo"><a href="/">LOGO</a></div>
-      <router-link to="/chat" class="chat-button">
+      <router-link to="/chat/list" class="chat-button">
         <img src="../../assets/chat.svg" alt="chat icon">
       </router-link>
     </div>

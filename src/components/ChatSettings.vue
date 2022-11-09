@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
 .container {
-  box-shadow: 0px 13px 11px -12px rgba(0, 0, 0, .12);
+  box-shadow: 0 13px 11px -12px rgba(0, 0, 0, .12);
   padding-bottom: 1rem;
 
   h2 {
@@ -73,6 +73,4 @@
     }
   }
 }
-
-
 </style>

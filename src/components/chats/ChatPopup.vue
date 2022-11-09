@@ -12,6 +12,7 @@
 import SendMessage from "@/components/messages/SendMessage";
 import MessagesList from "@/components/messages/MessagesList";
 import UserBar from "@/components/UserBar";
+import fetchMessages from "@/mixins/fetchMessages";
 
 export default {
   components: { SendMessage, MessagesList, UserBar },
@@ -31,17 +32,19 @@ export default {
   methods: {
     closeChat(){
       this.$emit('close-chat')
+    },
+    getChat() {
+      this.username = this.chat.username;
+      this.messages = fetchMessages(this.chat);
     }
   },
   created(){
-    this.username = this.chat.username;
-    this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}, {'unread': this.chat.unread}]
+    this.getChat()
   },
   watch: {
     chat: function(newChat, oldChat) {
       if (newChat !== oldChat){
-        this.username = this.chat.username;
-        this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}, {'unread': this.chat.unread}]
+        this.getChat()
       }
     }
   }

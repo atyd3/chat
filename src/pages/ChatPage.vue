@@ -16,9 +16,10 @@ import UserBar from "@/components/UserBar"
 import ChatList from "@/components/chats/ChatList";
 import MessagesList from "@/components/messages/MessagesList";
 import SendMessage from "@/components/messages/SendMessage";
+import fetchMessages from "@/mixins/fetchMessages";
 
 export default {
-  components: {SendMessage, MessagesList, UserBar, ChatList, ChatSettings},
+  components: { SendMessage, MessagesList, UserBar, ChatList, ChatSettings },
   inject: {chats: 'chats'},
   data() {
     return {
@@ -28,10 +29,20 @@ export default {
     }
   },
   methods: {
+    findChat() {
+      for (let chat of this.chats) {
+        if (chat.username === this.$route.params.user) {
+          this.openChat(chat)
+        } else {
+          this.openChat(this.currentChat)
+        }
+      }
+    },
     openChat(chat) {
       this.currentChat = chat;
       this.displayMessages = true;
-      this.messages = [{'received': this.currentChat.received}, {'sent': this.currentChat.sent}, {'unread': this.currentChat.unread}]
+      this.messages = fetchMessages(this.currentChat);
+      this.$router.push({name: `chat`, params: {user: chat.username}});
     },
     showUsersList() {
       this.displayMessages = false;
@@ -45,13 +56,17 @@ export default {
   watch: {
     currentChat(nChat) {
       this.openChat(nChat);
+    },
+    $route() {
+      this.findChat();
     }
   },
   created() {
     if (window.innerWidth > 600) {
       this.openChat(this.currentChat)
+      this.findChat()
     }
-  }
+  },
 }
 </script>
 

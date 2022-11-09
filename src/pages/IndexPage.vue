@@ -13,7 +13,7 @@ import NavList from "@/components/nav/NavList";
 import ChatPopup from "@/components/chats/ChatPopup";
 
 export default {
-  components: {NavList, ChatPopup},
+  components: { NavList, ChatPopup },
   inject: ['chats'],
   data() {
     return {
