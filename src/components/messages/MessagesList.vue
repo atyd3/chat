@@ -21,17 +21,13 @@ export default {
   methods: {
     createList(){
       this.messagesList = [];
-      const {received} = this.messages[0];
-      const {sent} = this.messages[1];
-      const {unread} = this.messages[2];
-      for (const message in received){
-        this.messagesList.push(["received", message, received[message]])
-      }
-      for (const message in unread){
-        this.messagesList.push(["received", message, unread[message]])
-      }
-      for (const message in sent){
-        this.messagesList.push(["sent", message, sent[message]])
+      this.pushToList(this.messages[0].received, 'received')
+      this.pushToList(this.messages[1].sent, 'sent')
+      this.pushToList(this.messages[2].unread, 'received')
+    },
+    pushToList(element, status){
+      for (const [key, message] of Object.entries(element)){
+        this.messagesList.push([status, key, message]);
       }
       this.messagesList.sort((a, b) => a[1] - b[1]);
     },
@@ -49,7 +45,7 @@ export default {
     }
   },
   async created(){
-    if(this.messages[0]){
+    if (this.messages.length > 0){
       await this.createList();
       this.scroll()
     }

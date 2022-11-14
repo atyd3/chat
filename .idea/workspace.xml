@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/mixins/fetchMessages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chats/ChatItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chats/ChatItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chats/ChatList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chats/ChatList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chats/ChatPopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chats/ChatPopup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ChatPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ChatPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/messages/MessagesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messages/MessagesList.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +73,8 @@
       <workItem from="1667465749607" duration="7556000" />
       <workItem from="1667808958918" duration="7313000" />
       <workItem from="1667897263124" duration="8328000" />
-      <workItem from="1667985622137" duration="1526000" />
+      <workItem from="1667985622137" duration="14040000" />
+      <workItem from="1668415044510" duration="2118000" />
     </task>
     <servers />
   </component>
