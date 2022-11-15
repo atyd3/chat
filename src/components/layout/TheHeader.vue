@@ -2,16 +2,15 @@
   <div class="nav">
     <div class="nav__container">
       <div class="logo"><a href="/">LOGO</a></div>
-      <a href="/chat" class="chat-button">
+      <router-link to="/chat/list" class="chat-button">
         <img src="../../assets/chat.svg" alt="chat icon">
-      </a>
+      </router-link>
     </div>
     <div class="banner">
       <h2>BANNER TEXT</h2>
     </div>
   </div>
 </template>
-
 
 <style lang="scss" scoped>
 @import "@/styles/_mixins.scss";
@@ -70,7 +69,5 @@
       display: none;
     }
   }
-
-
 }
 </style>

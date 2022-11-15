@@ -2,7 +2,7 @@
   <div class="chat__list">
     <chat-item
         v-for="chat in chats"
-        :key="chat"
+        :key="chat.username"
         :username="chat.username"
         :lastMessage="chat.lastMessage.value"
         :unread="Object.keys(chat.unread).length"
@@ -16,15 +16,20 @@
 import ChatItem from "@/components/chats/ChatItem";
 
 export default {
-  components: { ChatItem },
+  components: {ChatItem},
   emits: ['open-chat'],
   inject: ['chats'],
-  props: ['isActive'],
-  methods: {
-    openChat(chat) {
-      this.$emit('open-chat', chat);
+  props: {
+    isActive: {
+      type: Object,
+      required: true
     }
   },
+  methods: {
+    openChat(chat) {
+      this.$emit('open-chat', chat)
+    }
+  }
 }
 </script>
 
@@ -42,9 +47,9 @@ export default {
       background: #cdcbcb;
       box-shadow: none;
 
-      @include respond(phone){
+      @include respond(phone) {
         background: none;
-        box-shadow: 0px 13px 11px -12px rgba(0,0,0,.12);
+        box-shadow: 0 13px 11px -12px rgba(0, 0, 0, .12);
       }
     }
   }

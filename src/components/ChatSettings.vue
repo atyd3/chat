@@ -3,12 +3,10 @@
     <div class="settings-bar">
       <h2>Messages</h2>
       <div class="circle">
-      <!-- @click="open-dropdown" -->
       <img src="../assets/settings.svg"></div>
     </div>
     <div class="search">
       <img src="../assets/search.svg"/>
-      <!--replace with <img src="/icons/icon-search.svg">-->
       <input type="text" placeholder="Search">
     </div>
   </div>
@@ -16,7 +14,7 @@
 
 <style lang="scss" scoped>
 .container {
-  box-shadow: 0px 13px 11px -12px rgba(0, 0, 0, .12);
+  box-shadow: 0 13px 11px -12px rgba(0, 0, 0, .12);
   padding-bottom: 1rem;
 
   h2 {
@@ -75,6 +73,4 @@
     }
   }
 }
-
-
 </style>

@@ -8,10 +8,15 @@ import TheHeader from "@/components/layout/TheHeader";
 import messages from "../messages.json";
 
 export default {
-  components: {TheHeader},
+  components: { TheHeader },
   data() {
     return {
       chats: [],
+    }
+  },
+  provide() {
+    return {
+      chats: this.chats
     }
   },
   methods: {
@@ -28,7 +33,7 @@ export default {
       }
       for (let i = 0; i < arguments.length; i++) {
         Object.entries(arguments[i]).forEach(([key, value]) => {
-            if (key > lastMessage.key) {
+          if (key > lastMessage.key) {
             lastMessage.key = key;
             lastMessage.value = value;
           }
@@ -37,12 +42,9 @@ export default {
       return lastMessage;
     }
   },
-  provide(){
-    return { 'chats': this.chats }
-  },
   created() {
     this.fetchChats();
-  },
+  }
 }
 </script>
 
