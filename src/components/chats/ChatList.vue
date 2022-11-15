@@ -19,7 +19,12 @@ export default {
   components: {ChatItem},
   emits: ['open-chat'],
   inject: ['chats'],
-  props: ['isActive'],
+  props: {
+    isActive: {
+      type: Object,
+      required: true
+    }
+  },
   methods: {
     openChat(chat) {
       this.$emit('open-chat', chat)

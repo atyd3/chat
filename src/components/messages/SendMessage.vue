@@ -1,19 +1,9 @@
 <template>
   <div class="send">
-    <input type="text" v-model="userMsg">
+    <input type="text">
     <img src="../../assets/arrow.svg">
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      userMsg: ''
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 @import "@/styles/_mixins.scss";

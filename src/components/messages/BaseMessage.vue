@@ -1,12 +1,17 @@
 <template>
-    <div :class="role">
-      <slot></slot>
-    </div>
+  <div :class="role">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ['role']
+  props: {
+    role: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -18,10 +23,10 @@ div {
   padding: 8px;
   white-space: pre-wrap;
   word-break: break-word;
-  font: 0.9rem Roboto,sans-serif;
+  font: 0.9rem Roboto, sans-serif;
   display: inline-block;
 
-  @include respond(phone){
+  @include respond(phone) {
     font-size: 1rem;
   }
 }
