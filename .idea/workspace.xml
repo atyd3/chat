@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chats/ChatList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chats/ChatList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/messages/BaseMessage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messages/BaseMessage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/messages/SendMessage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messages/SendMessage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/chats/ChatList.vue</url>
           <line>21</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
