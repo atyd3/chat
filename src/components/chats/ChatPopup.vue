@@ -11,11 +11,11 @@
 <script>
 import SendMessage from "@/components/messages/SendMessage";
 import MessagesList from "@/components/messages/MessagesList";
-import BaseCard from "@/components/UI/BaseCard";
 import UserBar from "@/components/UserBar";
+import fetchMessages from "@/mixins/fetchMessages";
 
 export default {
-  components: {SendMessage, MessagesList, BaseCard, UserBar},
+  components: { SendMessage, MessagesList, UserBar },
   emits: ['close-chat'],
   props: {
     chat: {
@@ -31,19 +31,20 @@ export default {
   },
   methods: {
     closeChat(){
-      console.log('close-chat')
       this.$emit('close-chat')
+    },
+    getChat() {
+      this.username = this.chat.username;
+      this.messages = fetchMessages(this.chat);
     }
   },
   created(){
-    this.username = this.chat.username;
-    this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}, {'unread': this.chat.unread}]
+    this.getChat()
   },
   watch: {
     chat: function(newChat, oldChat) {
       if (newChat !== oldChat){
-        this.username = this.chat.username;
-        this.messages = [{'received': this.chat.received}, {'sent': this.chat.sent}, {'unread': this.chat.unread}]
+        this.getChat()
       }
     }
   }
@@ -51,6 +52,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/_mixins.scss";
+
 .popup-container {
   position: fixed;
   right: 70px;
@@ -58,5 +61,9 @@ export default {
   width: 320px;
   z-index:8;
   background-color: white;
+
+  @include respond(phone){
+    display: none;
+  }
 }
 </style>
