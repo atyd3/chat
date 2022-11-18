@@ -1,7 +1,9 @@
 <template>
   <div class="nav">
     <div class="nav__container">
-      <div class="logo"><a href="/">LOGO</a></div>
+      <div class="logo">
+        <router-link to="/">LOGO</router-link>
+      </div>
       <router-link to="/chat/list" class="chat-button">
         <img src="../../assets/chat.svg" alt="chat icon">
       </router-link>
@@ -65,7 +67,7 @@
       color: white;
     }
 
-    @include respond(phone){
+    @include respond(phone) {
       display: none;
     }
   }

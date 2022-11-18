@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b95eaa13-bb45-46b2-afe7-35dd0d4db7c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ChatPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ChatPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Nowe_dokumenty/portfolio/chat-demo/chat&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Nowe_dokumenty/portfolio/cocktails-app&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -77,6 +78,8 @@
       <workItem from="1667985622137" duration="14040000" />
       <workItem from="1668415044510" duration="3473000" />
       <workItem from="1668460058831" duration="1938000" />
+      <workItem from="1668678896684" duration="8141000" />
+      <workItem from="1668776326516" duration="6012000" />
     </task>
     <servers />
   </component>

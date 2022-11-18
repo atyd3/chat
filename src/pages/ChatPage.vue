@@ -2,7 +2,7 @@
   <base-card class="grid-container">
     <chat-settings :class="['right-shadow', 'left', { 'hide': displayMessages }]"></chat-settings>
     <chat-list :class="['grid-container__left', 'right-shadow', 'left', { 'hide': displayMessages }]"
-               :isActive="currentChat" @openChat="openChat"></chat-list>
+               :isActive="currentChat" @openChat="triggerOpenChat"></chat-list>
 
     <user-bar :class="['right', { 'hide': !displayMessages }]" :user="currentUser"
               @navigateBack="showUsersList"></user-bar>
@@ -19,7 +19,7 @@ import SendMessage from "@/components/messages/SendMessage";
 import fetchMessages from "@/mixins/fetchMessages";
 
 export default {
-  components: { SendMessage, MessagesList, UserBar, ChatList, ChatSettings },
+  components: {SendMessage, MessagesList, UserBar, ChatList, ChatSettings},
   inject: {chats: 'chats'},
   data() {
     return {
@@ -29,23 +29,24 @@ export default {
     }
   },
   methods: {
-    findChat() {
+    triggerOpenChat(chat) {
+      console.log('triggered', chat)
+      this.$router.push({name: `chat`, params: {user: chat.username}});
+    },
+    openChat() {
+      console.log('open chat')
       for (let chat of this.chats) {
         if (chat.username === this.$route.params.user) {
-          this.openChat(chat)
-        } else {
-          this.openChat(this.currentChat)
+          this.currentChat = chat;
+          console.log('open chat ', chat.username)
         }
       }
-    },
-    openChat(chat) {
-      this.currentChat = chat;
       this.displayMessages = true;
       this.messages = fetchMessages(this.currentChat);
-      this.$router.push({name: `chat`, params: {user: chat.username}});
     },
     showUsersList() {
       this.displayMessages = false;
+      this.$router.push({name: `chat`, params: {user: 'list'}})
     }
   },
   computed: {
@@ -54,19 +55,24 @@ export default {
     }
   },
   watch: {
-    currentChat(nChat) {
-      this.openChat(nChat);
-    },
-    $route() {
-      this.findChat();
+    '$route.params.user'(nParam) {
+      console.log('route watcher: ', this.$route.params.user)
+      if (nParam === 'list' && window.innerWidth <= 600) {
+        this.displayMessages = false;
+      } else {
+        this.openChat()
+      }
     }
   },
   created() {
+    console.log('created chat page')
     if (window.innerWidth > 600) {
-      this.openChat(this.currentChat)
-      this.findChat()
+    this.$route.params.user !== 'list' ? this.openChat() : this.triggerOpenChat(this.currentChat);
+      console.log('created user from params:', this.$route.params.user)
+
     }
-  },
+  }
+  ,
 }
 </script>
 
