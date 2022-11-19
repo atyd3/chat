@@ -37,6 +37,11 @@ export default {
   border-radius: 8px;
   margin-right: 5px;
 
+  &:hover {
+    cursor: pointer;
+    background: #cdcbcb50;
+  }
+
   &__img {
     width: 45px;
     height: 45px;

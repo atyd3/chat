@@ -30,23 +30,16 @@ export default {
   },
   methods: {
     triggerOpenChat(chat) {
-      console.log('triggered', chat)
       this.$router.push({name: `chat`, params: {user: chat.username}});
     },
     openChat() {
-      console.log('open chat')
-      for (let chat of this.chats) {
-        if (chat.username === this.$route.params.user) {
-          this.currentChat = chat;
-          console.log('open chat ', chat.username)
-        }
-      }
+      this.currentChat = this.chats.find(chat => chat.username === this.$route.params.user);
       this.displayMessages = true;
       this.messages = fetchMessages(this.currentChat);
     },
     showUsersList() {
       this.displayMessages = false;
-      this.$router.push({name: `chat`, params: {user: 'list'}})
+      this.triggerOpenChat({username: 'list'})
     }
   },
   computed: {
@@ -56,23 +49,20 @@ export default {
   },
   watch: {
     '$route.params.user'(nParam) {
-      console.log('route watcher: ', this.$route.params.user)
       if (nParam === 'list' && window.innerWidth <= 600) {
         this.displayMessages = false;
-      } else {
+      } else if (nParam) {
         this.openChat()
       }
     }
   },
   created() {
-    console.log('created chat page')
-    if (window.innerWidth > 600) {
-    this.$route.params.user !== 'list' ? this.openChat() : this.triggerOpenChat(this.currentChat);
-      console.log('created user from params:', this.$route.params.user)
-
+    if (this.$route.params.user !== 'list') {
+      this.openChat()
+    } else if (window.innerWidth > 600) {
+      this.triggerOpenChat(this.currentChat)
     }
   }
-  ,
 }
 </script>
 

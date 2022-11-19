@@ -20,11 +20,15 @@ export default {
   height: 50px;
   margin-top: 8px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &[data-badge] {
     position: relative;
     &:after {
       position: absolute;
-      right: -5px;
+      left: -5px;
       top: -5px;
       min-width: 10px;
       min-height: 10px;

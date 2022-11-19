@@ -68,6 +68,10 @@ export default {
 
   .close-icon {
     display: none;
+
+    &:hover {
+     cursor: pointer;
+    }
   }
 
   .back-icon {

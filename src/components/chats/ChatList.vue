@@ -16,7 +16,7 @@
 import ChatItem from "@/components/chats/ChatItem";
 
 export default {
-  components: {ChatItem},
+  components: { ChatItem },
   emits: ['open-chat'],
   inject: ['chats'],
   props: {
@@ -46,6 +46,9 @@ export default {
     &--active {
       background: #cdcbcb;
       box-shadow: none;
+      &:hover {
+        background: #cdcbcb;
+      }
 
       @include respond(phone) {
         background: none;
